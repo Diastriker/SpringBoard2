@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Controller
 public class TestController {
 	
@@ -18,7 +20,6 @@ public class TestController {
 	public String test() {
 		return "<h2>Hello SpringBoot!!!</h2>";
 	}
-	
 	
 }
 
