@@ -71,11 +71,19 @@ public class MenuController {
 		return "redirect:/Menus/List";
 	}
 	
+	@RequestMapping("/Menus/UpdateForm")
+	public String updateForm(@RequestParam("menu_id") String menu_id,
+							  Model model) {
+		System.out.println( menu_id );
+		model.addAttribute("menu_id",menu_id);
+		return "menus/update";
+	}
+	
 	@RequestMapping("/Menus/Update")
 	public String update(MenuDTO menuDTO) {
 		
-		menuMapper.updateMenu();
-		return "";
+		menuMapper.updateMenu(menuDTO);
+		return "redirect:/Menus/List";
 	}
 }
 

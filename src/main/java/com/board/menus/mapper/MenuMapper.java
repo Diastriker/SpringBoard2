@@ -11,7 +11,7 @@ import com.board.menus.domain.MenuDTO;
 public interface MenuMapper {
 	void insertMenu(MenuDTO menuDTO); 
 	void deleteMenu(MenuDTO menuDTO);
-
+	void updateMenu(MenuDTO menuDTO);
 	List<MenuDTO> getMenuList();
 
 }
