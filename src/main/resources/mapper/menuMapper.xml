@@ -21,4 +21,10 @@
   	WHERE MENU_ID = #{ menu_id }
   </delete>
  
+  <update id="updateUpdate">
+  	UPDATE MENUS
+  	SET MENU_NAME = ${}, MENU_SEQ
+  	WHERE MENU_ID = #{ menu_id }
+  </update>
+ 
 </mapper>

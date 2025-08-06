@@ -70,6 +70,13 @@ public class MenuController {
 		
 		return "redirect:/Menus/List";
 	}
+	
+	@RequestMapping("/Menus/Update")
+	public String update(MenuDTO menuDTO) {
+		
+		menuMapper.updateMenu();
+		return "";
+	}
 }
 
 
