@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 
 <link rel="icon" type="image/ico" href="/img/favicon.ico" />
-<link rel="stylesheet" href="/css/common.css" />
+<link rel="stylesheet" href="/css/common2.css" />
 
 </head>
 <body>
@@ -15,8 +15,8 @@
 	   <h2>Home</h2>
 	   <a href="/test">Test</a>
 	   <hr>
-	   <a href="/Menus/List">메뉴 목록</a><br>
-	   <a href="/Menus/WriteForm">메뉴 추가</a><br>
+	   <a href="/Users/List">유저 목록</a><br>
+	   <a href="/Users/WriteForm">유저 추가</a><br>
    </main>
 </body>
 </html>

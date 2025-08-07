@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 
 <link rel="icon" type="image/ico" href="/img/favicon.ico" />
-<link rel="stylesheet" href="/css/common.css" />
+<link rel="stylesheet" href="/css/common2.css" />
 
 <style>
 	td { text-align: center; }
@@ -25,7 +25,7 @@
 		}
 	}
 	
-	td[colspan="5"] {text-align : right;}
+	td[colspan="8"] {text-align : right;}
 	/*
 	tr:first-child td {
 		border-color : white;
@@ -37,33 +37,42 @@
 </head>
 <body>
 	<main>
-		<h2>메뉴 목록</h2>
+		<h2>유저 목록</h2>
 		<table>
 			<tr>
-				<td>Menu_id</td>
-				<td>Menu_name</td>
-				<td>Menu_seq</td>
-				<td><input type="button">삭제</td>
+				<td>User_id</td>
+				<td>Passwd</td>
+				<td>User_Name</td>
+				<td>Email</td>
+				<td>Upoint</td>
+				<td>Indate</td>
+				<td>삭제</td>
 				<td>수정</td>
 			</tr>
 			
 			<tr>
-				<td colspan="5">
-					<a href="/Menus/WriteForm">새 메뉴 추가</a>
+				<td colspan="8">
+					<a href="/Users/WriteForm">새 유저 추가</a>
+					<a href="/Users/WriteForm2?menu_name=${menu_name}">새 유저 추가2</a>
 				</td>
 			</tr>
 			
 			<!--             변수  =  컨트롤러에서 받은 변수 -->
-			<c:forEach var="menu" items="${ menuList }">
+			<c:forEach var="user" items="${ userList }">
 			<tr>
-				<td>${ menu.menu_id }</td> 
-				<td>${ menu.menu_name }</td>
-				<td>${ menu.menu_seq }</td>
-				<td><a href="/Menus/Delete?menu_id=${ menu.menu_id }">삭제</a></td>
-				<td><a href="/Menus/UpdateForm?menu_id=${ menu.menu_id }" >수정</a></td>
+				<td>${ user.userid }</td> 
+				<td>${ user.passwd }</td> 
+				<td>${ user.username }</td> 
+				<td>${ user.email }</td> 
+				<td>${ user.upoint }</td> 
+				<td>${ user.indate }</td>  
+
+				<td><a href="/Users/Delete?userid=${ user.userid }">삭제</a></td>
+				<td><a href="/Users/UpdateForm?userid=${ user.userid }" >수정</a></td>
 			</tr>
 			</c:forEach>
 		</table>
 	</main>
+	
 </body>
 </html>
